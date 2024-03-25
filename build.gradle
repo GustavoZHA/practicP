@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'io.rest-assured', name: 'rest-assured-common', version: '5.3.0'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-opera-driver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-opera-driver', version: '4.4.0'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '4.9.0'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.9.0'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.9.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '4.9.0'
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.3.2'
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.5.3'
+
+}
+
+test {
+    useJUnitPlatform()
+}
